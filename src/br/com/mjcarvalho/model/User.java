@@ -1,5 +1,8 @@
 package br.com.mjcarvalho.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class User {
 
 	private String name;
@@ -36,6 +39,4 @@ public class User {
 	public void setMaster(boolean master) {
 		this.master = master;
 	}
-
-	
 }
