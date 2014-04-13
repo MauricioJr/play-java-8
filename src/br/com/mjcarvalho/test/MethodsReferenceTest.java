@@ -22,13 +22,13 @@ public class MethodsReferenceTest {
 		users.add(new User("User 2 ", 5, false));
 		users.add(new User("User 1 ", 3, false));
 		users.add(new User("User 4 ", 101, true));
-        users.forEach(User::print);
+		users.forEach(System.out::println);
         System.out.println("-----------------------------------");
 	}
 
 	
 	public void afterPrint() {
-	   users.forEach(User::print);
+	   users.forEach(System.out::println);
 	   System.out.println("-----------------------------------");
 	}
 	

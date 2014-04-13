@@ -12,7 +12,15 @@ public class User {
 		this.point = point;
 		this.master = master;
 	}
+	
+	public User(String name) {
+		super();
+		this.name = name;
+	}
 
+	public User(){
+		super();
+	}
 	public String getName() {
 		return name;
 	}
@@ -37,8 +45,10 @@ public class User {
 		this.master = true;
 	}
 
-	public void print() {
-		System.out.println("User [name=" + name + ", point=" + point + ", master=" + master + "]");
+	@Override
+	public String toString() {
+		return "User [name=" + name + ", point=" + point + ", master=" + master
+				+ "]";
 	}
-
+	
 }
