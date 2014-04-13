@@ -2,6 +2,7 @@ package br.com.mjcarvalho.test;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import static java.util.Comparator.comparing;
 import java.util.List;
 
 import org.junit.After;
@@ -36,6 +37,11 @@ public class CollectionSortTests {
 	@Test
 	public void comparatorByListWithLambdaTest() {
 		users.sort((u1, u2) -> u1.getName().compareTo(u2.getName()));
+	}
+	
+	public void comparatorFactoryTest(){
+		//users.sort(Comparator.comparing(u -> u.getName())); //static import 
+		users.sort(comparing(u -> u.getName()));
 	}
 
 }
