@@ -33,7 +33,7 @@ public class User {
 		return master;
 	}
 
-	public void setMaster(boolean master) {
-		this.master = master;
+	public void setMaster() {
+		this.master = true;
 	}
 }
