@@ -1,0 +1,16 @@
+bin/
+.settings/
+target/
+.metadata/
+#Ignore files created by Eclipse
+*.project
+*.classpath
+*.cache
+*.releaseBackup
+
+nbbuild.xml
+
+ 
+#Ignore Web files created by ReSharper
+WebContent/WEB-INF/classes
+WebContent/WEB-INF/lib
