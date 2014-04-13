@@ -1,14 +1,17 @@
 package br.com.mjcarvalho.test;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Random;
-
 import static java.util.Comparator.comparing;
 import static java.util.Comparator.comparingInt;
 import static java.util.Comparator.naturalOrder;
+import static java.util.Comparator.nullsFirst;
+import static java.util.Comparator.nullsLast;
 
+
+
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.Random;
 
 import org.junit.After;
 import org.junit.Before;
@@ -80,5 +83,16 @@ public class CollectionSortTests {
 		            (c1, c2) -> Integer.compare(keyExtractor.applyAsInt(c1), keyExtractor.applyAsInt(c2));
 		*/
 		users.sort(comparingInt(u -> u.getPoint()));
+	}
+	
+	@Test
+	public void composingComparatorsTest(){
+		//We can use thenComparing to set one more value to order if the first is equals.
+		users.sort(comparingInt(User::getPoint).thenComparing(User::getName));
+	}
+
+	@Test
+	public void orderReversedByUserPoints(){
+		users.sort(comparingInt(User::getPoint).reversed());
 	}
 }

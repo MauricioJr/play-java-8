@@ -36,4 +36,9 @@ public class User {
 	public void setMaster() {
 		this.master = true;
 	}
+
+	public void print() {
+		System.out.println("User [name=" + name + ", point=" + point + ", master=" + master + "]");
+	}
+
 }
