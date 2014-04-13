@@ -1,8 +1,5 @@
 package br.com.mjcarvalho.model;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class User {
 
 	private String name;

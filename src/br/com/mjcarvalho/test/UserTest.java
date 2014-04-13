@@ -3,8 +3,6 @@ package br.com.mjcarvalho.test;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
-import java.util.function.Predicate;
-
 import org.junit.Before;
 import org.junit.Test;
 
@@ -63,7 +61,6 @@ public class UserTest {
 			}
 		};
 		*/
-		
 		users.removeIf(u -> u.getPoint() > 100);
 		users.forEach(u -> System.out.println("This User were not removed from the list -> " + u.getName()));
 	}

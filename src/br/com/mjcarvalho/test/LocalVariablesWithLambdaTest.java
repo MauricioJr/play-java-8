@@ -11,7 +11,7 @@ public class LocalVariablesWithLambdaTest {
 			System.out.println("Acess external variable number ->" + number);
 		}).start();
 		
-		//will not compile because number need to be final (this time implicit) to be used at lambdas expressions.
+		//will not compile because number need to be final (this time implicit) to be used in lambdas expressions.
 		//number = 10;
 	}
 }
