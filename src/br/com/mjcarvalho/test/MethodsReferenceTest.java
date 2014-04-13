@@ -30,11 +30,12 @@ public class MethodsReferenceTest {
 	
 	@Test
 	public void setAllUserMasterAttrUsingMethodsRefereceTest(){
-		/* using Lambda 
-		 * users.forEach(u -> u.setMaster());
-		 * */
-		
-		//using method reference
+		/*		
+		 * User::setMaster generate an functional interface (Consumer)
+		 * Ex: Consumer<User> consumer = User::isMaster  is equals then:
+		 *     Consumer<User> comsumer = u -> u.isMaster();
+		 *     So we can do something like below:
+		 */
 		users.forEach(User::setMaster);
 	}
 }
